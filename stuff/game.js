@@ -158,6 +158,16 @@ function extractRemainingWords() {
     return rem;
 }
 
+// https://stackoverflow.com/a/12646864
+function shuffleArray(array) {
+    for (var i = array.length - 1; i > 0; i--) {
+        var j = Math.floor(Math.random() * (i + 1));
+        var temp = array[i];
+        array[i] = array[j];
+        array[j] = temp;
+    }
+}
+
 function addAllWordBlocks() {
     let index = 0;
     for (var i=0; i<4; i++) {
@@ -173,13 +183,14 @@ function addAllWordBlocks() {
         }
     }
     resetFontSizes();
-    reshuffleAll(false);
+    reshuffleAll(true);
 }
 
 function reshuffleAll(animate) {
     deselectAll();
     // Shuffle remaining words
-    words_places = words_places.sort( () => .5 - Math.random() );
+    shuffleArray(words_places);
+
     // Assign new places
     let index = 0;
     let starting_row = groups_found.length; // Skipping first rows where categs are found
