@@ -15,36 +15,71 @@
         <meta name="viewport" content="width=device-width,initial-scale=1"/>
         
         <script type="text/javascript">
-            //---------------------------- WORDS ----------------------------//
-            // Green
-            // Yellow
-            // Blue
-            // Purple
-            /*
-            const WORDS = [
-                ["Musicals", ["Rent", "Annie", "Chicago", "Hamilton"]],
-                ["Luxury brands", ["Chanel", "Burberry", "Fendi", "Gucci"]],
-                ["US based family", ["Castro", "Cotran", "Orchowsa", "Froelich"]],
-                ["4-syllable names", ["Majdalani", "Mississippi", "Casablanca", "Valentino"]]
-            ];
-            */
-            /*
-            const WORDS = [
-                ["Musicals", ["Rent", "Annie", "Chicago", "Hamilton"]],
-                ["Luxury brands", ["Chanel", "Burberry", "Fendi", "Gucci"]],
-                ["US based family", ["Castro", "Cotran", "Orchowsa", "Froelich"]],
-                ["4-syllable names", ["Majdalani", "Mississippi", "Casablanca", "Valentino"]]
-            ];
-            */
             const GAME_ID = "test1";
             const ALL_GAMES = ["test0", "test1", "test2"];
 
-            const WORDS = [
-                ["Musicals", ["1 a", "1 b", "1 c", "1 d"]],
-                ["Luxury brands", ["2 a", "2 b", "2 c", "2 d"]],
-                ["US based family", ["3 a", "3 b", "3 c", "3 d"]],
-                ["4-syllable names", ["4 AAA", "4 BBB", "4 CCC", "4 DDD"]]
+            const ALL_WORDS = [
+
+                // 
+                [
+                    ["Neighborhood Dogs", ["April", "Luna", "Romeo", "Bella"]],
+                    ["Family member first syllable"], ["Ash", "Just", "Bud", "Char"],
+                    ["_'s law(s)", ["Newton", "Darwin", ""]],
+                    []
+                ],
+
+                // done
+                [
+                    ["School Mascots", ["Blue", "Patriot", "Terrier", "Dolphin"]],
+                    ["Dog Nicknames", ["Monster", "Piglet", "Turkey", "Angel"]],
+                    ["_ Scout", ["Girl", "Cub", "College", "Eagle"]],
+                    ["Suburbian Wildlife", ["Deer", "Fox", "Vulture", "Cardinal"]]
+                ],
+
+                // done
+                [
+                    ["Card Games", ["Spit", "Gin", "Casino", ""]],
+                    ["Stock Market Trends", ["Rally", "Correction", "Squeeze", "Bubble"]],
+                    ["Exercises", ["Dip", "Run", "Clean", "Curl"]],
+                    ["Drink Styles", ["Neat", "Mixed", "Shot", "Double"]]
+                ],
+
+                // done
+                [
+                    ["Poker Terms", ["Flop", "Check", "Pot", "Blind"]],
+                    ["College Friends", ["Pat", "Bill", "Mark", "Rob"]],
+                    ["_ Road", ["Falls", "River", "Glen", "Frederick"]],
+                    ["Touch lightly", ["Pet", "Dab", "Tap", "Brush"]]
+                ],
+
+                // done
+                [
+                    ["Countries Visited", ["Canada", "Italy", "Spanish", "English"]],
+                    ["Sound like another word", ["Turkey", "Hungary", "Finnish", "Greece"]],
+                    ["Breakfast dish named after country", ["Belgian", "French", "Swedish", "Danish"]],
+                    ["Tennis star homes", ["Switzerland", "Serbian", "Norway", "Austria"]]
+                ],
+
+                [
+                    ["Wrestler nicknames", ["Hitman", "Giant", "Macho", "Hulk"]],
+                    ["_ man/woman (superhero)", ["Ant", "Iron", "Wonder", "Cat"]],
+                    ["Companies", []],
+                    []
+                ],
+
+                // done
+                [
+                    ["Tennis player nicknames", ["Joker", "Murray", "Fed", "Stan"]],
+                    ["Impractical Jokers' names", ["Joe", "Brian", "James", "Prince"]],
+                    ["_ Cup", ["World", "Stanley", "Davis", "Ryder"]],
+                    ["'The Office' Characters", ["Oscar", "Andy", "Kelly", "Creed"]]
+                ]
+
             ];
+
+            const dayOffset = Math.floor(msOffset / 1000 / 60 / 60 / 24);
+            const WORDS = ALL_WORDS[dayOffset % ALL_WORDS.length];
+
         </script>
         <script src="stuff/game.js"></script>
 
@@ -56,15 +91,13 @@
                 <div class="pop_close" onclick="hideResults()"><img src="stuff/x.png" width="100%"></div>
                 <div class="pop_content">
                     <h2>Amazing!</h2>
-                    <p id="pop_title">Four Fours</p>
                     <div class="trys"></div>
                     <div class="button primary" id="share">Share Your Results</div>
                     <p></p>
-                    <a class="button" id="playnext" href="#">Play Next Puzzle</a>
                 </div>
             </div>
 
-            <h1 class="headline">Create four groups of four!</h1>    
+            <h1 class="headline">Happy Birthday Dad!<br>Create four groups of four!</h1>    
             <div id="grid"></div>
 
             <div class="mistakes">
