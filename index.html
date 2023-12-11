@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>Four Fours</title>
+        <title>Sonnections</title>
 
         <link rel="stylesheet" href="stuff/reset.css">
         <link rel="stylesheet" href="stuff/styles.css">
@@ -20,12 +20,12 @@
 
             const ALL_WORDS = [
 
-                // 
+                // done
                 [
                     ["Neighborhood Dogs", ["April", "Luna", "Romeo", "Bella"]],
-                    ["Family member first syllable"], ["Ash", "Just", "Bud", "Char"],
-                    ["_'s law(s)", ["Newton", "Darwin", ""]],
-                    []
+                    ["Family member first syllable", ["Ash", "Just", "Bud", "Char"]],
+                    ["Shakespeare characters", ["Ophelia", "Cleopatra", "Julius", "Juliet"]],
+                    ["Cooking methods", ["Toast", "Bake", "Steam", "Grill"]]
                 ],
 
                 // done
@@ -38,7 +38,7 @@
 
                 // done
                 [
-                    ["Card Games", ["Spit", "Gin", "Casino", ""]],
+                    ["Card Games", ["Spit", "Gin", "Casino", "Bridge"]],
                     ["Stock Market Trends", ["Rally", "Correction", "Squeeze", "Bubble"]],
                     ["Exercises", ["Dip", "Run", "Clean", "Curl"]],
                     ["Drink Styles", ["Neat", "Mixed", "Shot", "Double"]]
@@ -60,11 +60,12 @@
                     ["Tennis star homes", ["Switzerland", "Serbian", "Norway", "Austria"]]
                 ],
 
+                // done
                 [
                     ["Wrestler nicknames", ["Hitman", "Giant", "Macho", "Hulk"]],
                     ["_ man/woman (superhero)", ["Ant", "Iron", "Wonder", "Cat"]],
-                    ["Companies", []],
-                    []
+                    ["Grandparents' Hobbies", ["Paint", "Bird", "Dance", "Clean"]],
+                    ["Kids' Hobbies", ["Cheer", "Chess", "Read", "Ball"]]
                 ],
 
                 // done
@@ -77,6 +78,8 @@
 
             ];
 
+            const offsetFromDate = new Date(2022, 0, 1)
+            const msOffset = Date.now() - offsetFromDate
             const dayOffset = Math.floor(msOffset / 1000 / 60 / 60 / 24);
             const WORDS = ALL_WORDS[dayOffset % ALL_WORDS.length];
 
@@ -97,7 +100,7 @@
                 </div>
             </div>
 
-            <h1 class="headline">Happy Birthday Dad!<br>Create four groups of four!</h1>    
+            <h1 class="headline">Happy Birthday Dad!</h1>
             <div id="grid"></div>
 
             <div class="mistakes">
